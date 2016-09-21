@@ -4,7 +4,9 @@
   "description": "Caitlin + Sterling Wedding Site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp watch",
+    "start": "stamplay start",
+    "test": "test"
   },
   "author": "Sterling Salzberg",
   "license": "ISC",

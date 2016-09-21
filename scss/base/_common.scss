@@ -1,0 +1,55 @@
+//
+// Display
+//
+.widthhalf,
+.widthfull {
+    box-sizing: border-box;
+}
+
+.widthhalf { width: 50%; }
+.widthfull { width: 100%; }
+
+.hide { display: none !important; }
+.block { display: block; }
+.blocklink {
+    @extend .block;
+    cursor: pointer;
+}
+
+.inlineblock {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.overflowhidden { overflow: hidden; }
+
+.left { float: left; }
+.right { float: right; }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//
+// Type Formatting
+//
+.text-left      { text-align: left; }
+.text-center    { text-align: center; }
+.text-right     { text-align: right; }
+.text-uppercase { text-transform: uppercase; }
+
+.text-ellipses  {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//
+// Colors
+//
+.fill-white { fill: color(white); }
+.fill-charcoal { fill: color(charcoal); }
+.fill-rose { fill: color(rose); }
+.fill-moss { fill: color(moss); }
