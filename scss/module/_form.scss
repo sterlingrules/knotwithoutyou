@@ -1,0 +1,65 @@
+input,
+label {
+    @include typography(big);
+    padding: 8px 18px;
+    color: color(white);
+
+    .form-item & {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+input {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid color(white);
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.form-item {
+    padding-right: 18px;
+    padding-left: 18px;
+}
+
+.form-item,
+.form-group {
+    margin-bottom: 1.45em;
+
+    .form-item {
+        margin-bottom: 0;
+    }
+}
+
+address {
+    input {
+        margin-bottom: 0;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border: none;
+    }
+
+    .citystate {
+        border-bottom: 2px solid color(white);
+
+        input {
+            padding-bottom: 8px;
+        }
+    }
+}
+
+.citystate {
+    input {
+        display: inline-block;
+
+        &[name="city"] { width: 50%; }
+        &[name="state"] { width: 18%; }
+        &[name="zip"] { width: 32%; }
+    }
+}

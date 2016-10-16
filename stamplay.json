@@ -1,0 +1,10 @@
+{
+  "appId": "knotwithoutyou",
+  "apiKey": "13e2e09a975a09bfd1b85e2b769de90eda883153d1a7cddd853086ab5ce936ef",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

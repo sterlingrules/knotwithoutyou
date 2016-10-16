@@ -1,0 +1,37 @@
+@import 'fonts/helena';
+
+$-default-family: 'proxima-nova', 'Helvetica', sans-serif;
+
+$-typography: (
+    copy: (
+        $-default-family, 400, 16px, 24px
+    ),
+    intro: (
+        $-default-family, 400, 18px, 28px
+    ),
+    headline: (
+        ('helena', sans-serif), 400, 106px, 1
+    ),
+    subheadline: (
+        $-default-family, 400, 28px, 1.2
+    ),
+
+
+    gigantic: (
+        $-default-family, 300, 48px, 64px
+    ),
+    huge: (
+        $-default-family, 300, 32px, 40px
+    ),
+
+
+    big: (
+        $-default-family, 300, 22px, 32px
+    ),
+    small: (
+        $-default-family, 400, 14px, 20px
+    ),
+    fine: (
+        $-default-family, 400, 12px, 16px
+    )
+);

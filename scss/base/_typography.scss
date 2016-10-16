@@ -1,0 +1,49 @@
+//
+// Typography
+//
+.typography-headline {
+    @include typography(headline);
+}
+
+.typography-subheadline {
+    @include typography(subheadline);
+    margin-bottom: 0.28em;
+    text-transform: uppercase;
+}
+
+.typography-big {
+    @include typography(subheadline);
+}
+
+.copy-margin {
+    margin-left: 48px;
+    margin-right: 48px;
+}
+
+
+//
+// Weights
+//
+strong,
+.strong {
+    font-weight: 600;
+}
+
+//
+// Letter Spacing
+//
+.letter-spacing-1 {
+    letter-spacing: -0.04em;
+}
+
+.letter-spacing-2 {
+    letter-spacing: -0.08em;
+}
+
+.letter-spacing-3 {
+    letter-spacing: -0.12em;
+}
+
+.letter-spacing-t {
+    letter-spacing: -0.14em;
+}

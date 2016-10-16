@@ -1,0 +1,81 @@
+$-transition-duration: 0.18s;
+$-dropshadow: 0 0 36px rgba(0,0,0, 0.26);
+
+//
+// Modals
+//
+main {
+    transition: transform $-transition-duration ease-out 0s;
+
+    .modal-active & {
+        transform: scale3d(0.96, 0.96, 1);
+    }
+}
+
+.modal {
+    pointer-events: none;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60vw;
+    min-width: 300px;
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 0;
+
+    .modal-action {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 36px 48px 48px;
+    }
+
+    &.active {
+        pointer-events: auto;
+        opacity: 1.0;
+    }
+}
+
+.modal-overlay {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(color(charcoal), 0.54);
+    transition: opacity $-transition-duration ease-out 0s;
+    transition-property: backdrop-filter opacity;
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+    opacity: 0.01;
+
+    .modal-active & {
+        pointer-events: auto;
+        opacity: 0.99;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
+
+
+//
+// Profile
+//
+#modal-profile {
+    form {
+        display: block;
+        box-sizing: border-box;
+        margin: 0 60px 58px 0;
+        padding: 80px 40px 40px;
+        border: $border-width solid color(moss);
+        box-shadow: $-dropshadow, $-dropshadow inset;
+    }
+
+    .modal-action {
+        box-sizing: border-box;
+        width: 50%;
+        font-weight: 600;
+        background-color: color(moss);
+    }
+}

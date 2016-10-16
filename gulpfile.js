@@ -54,9 +54,9 @@ gulp.task('build:css', function() {
 });
 
 gulp.task('build:js', ['clean:js'], function(cb) {
-    var fileType = 'JSX';
+    var fileType = 'JavaScript';
 
-    return browserify('./js/app.jsx', {
+    return browserify('./js/app.js', {
             debug: true
         })
         .transform(babelify, {
@@ -69,9 +69,9 @@ gulp.task('build:js', ['clean:js'], function(cb) {
             ]
         })
         .bundle()
-        .on('error', notify.onError(function (error) {
-            return getMessage('JSX', error);
-        }))
+        // .on('error', notify.onError(function (error) {
+        //     return getMessage(fileType, error);
+        // }))
         .pipe(source('app.js'))
         .pipe(buffer())
         // .pipe(minify({
@@ -81,7 +81,7 @@ gulp.task('build:js', ['clean:js'], function(cb) {
         //     minifyJS: true
         // }))
         .pipe(gulp.dest('./public/js'))
-        .pipe(notify(getMessage('JSX')));
+        .pipe(notify(getMessage(fileType)));
 });
 
 gulp.task('watch', tasks, function() {
@@ -105,10 +105,10 @@ gulp.task('watch', tasks, function() {
      *  `$ stamplay start`
      */
 
-    // http.createServer(app).listen(port, function () {
-    //     open('http://localhost:' + port);
-    //     notify(getMessage('server'));
-    // });
+    http.createServer(app).listen(port, function () {
+        open('http://localhost:' + port);
+        notify(getMessage('server'));
+    });
 });
 
 gulp.task('default', tasks);

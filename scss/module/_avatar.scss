@@ -1,0 +1,19 @@
+$-size: 128px;
+
+.avatar {
+    display: block;
+    box-sizing: border-box;
+    width: $-size;
+    height: $-size;
+    margin: $border-width;
+    background-color: color(moss);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: none;
+    border: $border-width solid color(moss);
+
+    #modal-profile & {
+        position: relative;
+        margin: 0 0 -64px 44px;
+    }
+}

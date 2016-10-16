@@ -1,0 +1,9 @@
+footer {
+    display: block;
+    position: relative;
+    height: $footer-height;
+    margin-top: $footer-height * -1;
+    padding: 48px 0;
+    background-color: color(charcoal);
+    clear: both;
+}

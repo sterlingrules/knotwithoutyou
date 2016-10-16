@@ -1,0 +1,10 @@
+.headline:before { z-index: -1; }
+.headline::before { z-index: -1; }
+.invitation-scrim { z-index: -1; }
+
+.headline { z-index: 1; }
+#invitation { z-index: 1; }
+
+.modal-overlay { z-index: 2; }
+.modal { z-index: 3; }
+#modal-profile .avatar { z-index: 4; }

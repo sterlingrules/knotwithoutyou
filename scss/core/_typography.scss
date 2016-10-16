@@ -1,0 +1,27 @@
+@mixin typography($name, $weight: null) {
+    $font-style: map-get($-typography, $name);
+
+    @if $font-style {
+        @if $weight == null {
+            $weight: nth($font-style, 2);
+        }
+
+        @if $weight == bold {
+            $weight: 900;
+        }
+
+        $family:        nth($font-style, 1);
+        $font-size:     nth($font-style, 3);
+        $line-height:   nth($font-style, 4);
+
+        font-family: $family;
+        font-weight: $weight;
+        font-size: $font-size;
+        line-height: $line-height;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+    @else {
+        @warn '#{$name} is not a valid typography style';
+    }
+}

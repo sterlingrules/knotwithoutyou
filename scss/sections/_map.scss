@@ -1,0 +1,27 @@
+#map {
+    .section-scroll {
+        position: relative;
+        height: 300vh;
+    }
+}
+
+#mapview {
+    display: block;
+    position: absolute;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 106vh;
+
+    .mapboxgl-marker {
+        display: block;
+        width: 36px;
+        height: 36px;
+        background-color: color(rose);
+        transform-origin: 50% 100%;
+        border-radius: 50%;
+    }
+}

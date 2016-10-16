@@ -1,0 +1,36 @@
+$-dropshadow: 0 0 64px rgba(0,0,0, 0.25);
+
+.headline {
+    display: block;
+    position: relative;
+    margin-bottom: 36px;
+    padding: 80px 0;
+    color: color(white);
+    border: $border-width solid color(charcoal);
+    text-shadow: $-dropshadow;
+    box-shadow: $-dropshadow, $-dropshadow inset;
+    box-sizing: border-box;
+
+    &:before,
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: $border-width;
+        right: $border-width;
+        bottom: $border-width;
+        left: $border-width;
+        background-color: color(charcoal);
+    }
+
+    &.headline-alt {
+        padding: 60px 0;
+        border-color: color(white);
+
+        &:before,
+        &::before {
+            color: color(white);
+            background-color: transparent;
+        }
+    }
+}

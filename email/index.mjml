@@ -1,0 +1,85 @@
+<mjml>
+    <mj-body>
+        <mj-container background-color="#fdf8f2">
+            <mj-section padding="80px 0">
+                <mj-section background-url="https://knotwithoutyou.com/public/img/email/header.png" background-size="100% auto" padding="42.6% 0 0"></mj-section>
+                <mj-section background-url="https://knotwithoutyou.com/public/img/email/content_bg.png" background-size="100% auto">
+                    <mj-column>
+                        <mj-text>
+                            <img src="https://knotwithoutyou.com/public/img/email/caitlin_sterling_headline.png" style="display:block; margin:0 auto; padding:0 0 40px 1.7%; max-width:481px; width:100%; height:auto;" />
+                            <img src="https://knotwithoutyou.com/public/img/email/flourish.png" style="display:block; margin:0 auto; padding:0 0 54px; width:83px; height:31px;" />
+                            <a href="http://addtocalendar.com/atc/google?f=m&e[0][date_start]=2017-07-15%2008%3A00%3A00&e[0][date_end]=2017-07-15%2023%3A00%3A00&e[0][timezone]=America%2FNew_York&e[0][title]=Caitlin%20%2B%20Sterling%20are%20Tying%20the%20Knot&e[0][description]=&e[0][location]=Laura%20Ward%20Riverwalk%20Plaza&e[0][organizer]=Caitlin%20Fahey&e[0][organizer_email]=cafahey0711%40gmail.com&e[0][privacy]=public" target="_blank" style="text-decoration:none;">
+                                <img src="https://knotwithoutyou.com/public/img/email/save_the_date_badge.png" style="display:block; margin:0 auto; padding:0 0 16px; max-width:470px; width:100%; height:auto;" />
+                            </a>
+
+                            <h1 style="padding-bottom:40px; text-align:center; text-transform:uppercase; font-weight:600; letter-spacing:1px; color:#7687a1;">Fort Lauderdale, FL</h1>
+
+                            <h2 style="font-weight:300; letter-spacing:1px; text-align:center; text-transform:uppercase; color:#7687a1;">Official invitations to follow</h2>
+                            <a href="http://knotwithoutyou.com/" target="_blank" style="text-decoration:none;">
+                              <img src="https://knotwithoutyou.com/public/img/email/confirm_button.png" style="display:block; max-width:475px; width:100%; height:auto; margin:0 auto; text-decoration:none;" />
+                            </a>
+                        </mj-text>
+                    </mj-column>
+                </mj-section>
+                <mj-section background-url="https://knotwithoutyou.com/public/img/email/footer.png" background-size="100% auto" padding="34px 0 0"></mj-section>
+                <mj-section>
+                    <mj-column>
+                        <mj-html>
+                            <p style="font-family: Ubuntu, 'helvetica', sans-serif; text-align:center; line-height:1.5em; color:#7687a1;">
+                                <a id="fl_ical" href="http://addtocalendar.com/atc/ical?f=m&e[0][date_start]=2017-07-15%2008%3A00%3A00&e[0][date_end]=2017-07-15%2023%3A00%3A00&e[0][timezone]=America%2FNew_York&e[0][title]=Caitlin%20%2B%20Sterling%20are%20Tying%20the%20Knot&e[0][description]=&e[0][location]=Laura%20Ward%20Riverwalk%20Plaza&e[0][organizer]=Caitlin%20Fahey&e[0][organizer_email]=cafahey0711%40gmail.com&e[0][privacy]=public" target="_blank">iCalendar</a> &nbsp;•&nbsp; <a id="fl_google" href="http://addtocalendar.com/atc/google?f=m&e[0][date_start]=2017-07-15%2008%3A00%3A00&e[0][date_end]=2017-07-15%2023%3A00%3A00&e[0][timezone]=America%2FNew_York&e[0][title]=Caitlin%20%2B%20Sterling%20are%20Tying%20the%20Knot&e[0][description]=&e[0][location]=Laura%20Ward%20Riverwalk%20Plaza&e[0][organizer]=Caitlin%20Fahey&e[0][organizer_email]=cafahey0711%40gmail.com&e[0][privacy]=public" target="_blank">Google Calendar</a> &nbsp;•&nbsp; <a id="fl_outlook" href="http://addtocalendar.com/atc/outlook?f=m&e[0][date_start]=2017-07-15%2008%3A00%3A00&e[0][date_end]=2017-07-15%2023%3A00%3A00&e[0][timezone]=America%2FNew_York&e[0][title]=Caitlin%20%2B%20Sterling%20are%20Tying%20the%20Knot&e[0][description]=&e[0][location]=Laura%20Ward%20Riverwalk%20Plaza&e[0][organizer]=Caitlin%20Fahey&e[0][organizer_email]=cafahey0711%40gmail.com&e[0][privacy]=public" target="_blank">Outlook</a> &nbsp;•&nbsp; <a id="fl_outlookonline" href="http://addtocalendar.com/atc/outlookonline?f=m&e[0][date_start]=2017-07-15%2008%3A00%3A00&e[0][date_end]=2017-07-15%2023%3A00%3A00&e[0][timezone]=America%2FNew_York&e[0][title]=Caitlin%20%2B%20Sterling%20are%20Tying%20the%20Knot&e[0][description]=&e[0][location]=Laura%20Ward%20Riverwalk%20Plaza&e[0][organizer]=Caitlin%20Fahey&e[0][organizer_email]=cafahey0711%40gmail.com&e[0][privacy]=public" target="_blank">Outlook Online</a> &nbsp;•&nbsp; <a id="fl_yahoo" href="http://addtocalendar.com/atc/yahoo?f=m&e[0][date_start]=2017-07-15%2008%3A00%3A00&e[0][date_end]=2017-07-15%2023%3A00%3A00&e[0][timezone]=America%2FNew_York&e[0][title]=Caitlin%20%2B%20Sterling%20are%20Tying%20the%20Knot&e[0][description]=&e[0][location]=Laura%20Ward%20Riverwalk%20Plaza&e[0][organizer]=Caitlin%20Fahey&e[0][organizer_email]=cafahey0711%40gmail.com&e[0][privacy]=public" target="_blank">Yahoo! Calendar</a>
+                            </p>
+                        </mj-html>
+                    </mj-column>
+                </mj-section>
+
+                <mj-section padding="0 20px">
+                  <mj-column>
+                    <mj-html>
+                      <p style="font-family: Ubuntu, 'helvetica', sans-serif; line-height:1.5em; color:#7687a1;">
+                      *|IF:LIST|*
+                      <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
+                      <br />
+                      <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+                      *|LIST:DESCRIPTION|*
+                      <br />
+                      <strong>Our mailing address is:</strong>
+                      <br />
+                      *|HTML:LIST_ADDRESS_HTML|*
+                      <br />
+                      <!-- *|END:IF|* -->
+                      *|ELSE:|*
+                      <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+                      <em>Copyright &copy; *|CURRENT_YEAR|* *|USER:COMPANY|*, All rights reserved.</em>
+                      <br />
+                      <strong>Our mailing address is:</strong>
+                      <br />
+                      *|USER:ADDRESS_HTML|*
+                      <!-- *|END:IF|* -->
+                      *|END:IF|*
+                      </p>
+                    </mj-html>
+                  </mj-column>
+                  <mj-column>
+                    <mj-html>
+                      <br />
+                      <p style="font-family: Ubuntu, 'helvetica', sans-serif; line-height:1.5em; color:#7687a1;">
+                        *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
+                      </p>
+                      <br />
+                    </mj-html>
+                  </mj-column>
+                </mj-section>
+
+                <mj-section padding="0 20px">
+                  <mj-column>
+                    <mj-html>
+                      <p style="font-family: Ubuntu, 'helvetica', sans-serif; text-align:center; line-height:1.5em; color:#7687a1;">
+                        &nbsp;<a href="*|UNSUB|*">unsubscribe from this list</a> | <a href="*|UPDATE_PROFILE|*">update subscription preferences</a><!-- *|IFNOT:ARCHIVE_PAGE|* --> | <a href="*|ARCHIVE|*">view email in browser</a><!-- *|END:IF|* -->&nbsp;
+                      </p>
+                    </mj-html>
+                  </mj-column>
+                </mj-section>
+            </mj-section>
+        </mj-container>
+    </mj-body>
+</mjml>

@@ -1,0 +1,33 @@
+@mixin button($type: 'action', $color: 'display', $transparent: false) {
+    &.btn-#{$type} {
+        color: color($color);
+        border-color: color($color);
+
+        @if ($transparent) {
+            border-color: transparent;
+        }
+
+        &:hover {
+            color: color(page);
+            background-color: color($color);
+
+            @if ($transparent) {
+                color: color($color);
+                border-color: color($color);
+                background-color: transparent;
+            }
+        }
+
+        &.btn-fill {
+            color: color(page);
+            background-color: color($color);
+
+            .btn-theme-dark & {
+                color: color($color);
+                background-color: color(page);
+            }
+        }
+
+        @content;
+    }
+}

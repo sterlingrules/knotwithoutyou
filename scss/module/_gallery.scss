@@ -1,0 +1,40 @@
+$-deck-item-count: 3;
+$-deck-item-width: 40vw;
+$-deck-item-gutter: $border-width;
+
+$-background-options: center center / cover no-repeat;
+
+#gallery {
+    overflow: hidden;
+    padding-top: $border-width;
+
+    .slant {
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: calc(-3vw + #{$border-width});
+    }
+
+    .deck {
+        width: $-deck-item-width * $-deck-item-count;
+        font-size: 0;
+    }
+
+    .deck-item {
+        display: inline-block;
+        margin-right: $border-width;
+        box-sizing: border-box;
+
+        &:last-child {
+            margin-right: ($-deck-item-gutter * 3) * -1;
+        }
+
+        @for $index from 1 through 9 {
+            &.deck-item--#{$index} {
+                @include background('gallery/gallery-#{$index}', 'jpg', $-background-options);
+                width: $-deck-item-width;
+                height: $-deck-item-width * (3/4);
+                // margin-bottom: (($index + 2) % 3) * 2#{'vw'};
+            }
+        }
+    }
+}

@@ -1,5 +1,74 @@
+$-slant-difference: 3vw;
+
 html,
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font: normal 18px "proxima-nova", sans-serif;
+    color: color(charcoal);
+    background-color: color(white);
+}
+
+body:before {
+    content: '';
+    float: left;
+    height: 100%;
+    width: 0;
+    margin-top: -32767px;
+}
+
+#main {
+    min-height: 100%;
+
+    #content {
+        overflow: auto;
+        padding-bottom: $footer-height;
+    }
+}
+
+.wrapper {
+    display: block;
+    width: 980px;
+    margin: 0 auto;
+}
+
+a {
+    color: color(charcoal);
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 0.45em;
+}
+
+//
+// Section
+//
+.section-padding {
+    display: block;
+    padding: 120px 0;
+}
+
+.section-content {
+    display: block;
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.slant {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: -1 * $-slant-difference;
+    clip-path: polygon(0% $-slant-difference, 100% 0%, 100% calc(100% - #{$-slant-difference}), 0% 100%);
+
+    &.slant-first {
+        clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - #{$-slant-difference}), 0% 100%);
+    }
+
+    &.slant-last {
+        margin-bottom: 0;
+        clip-path: polygon(0% $-slant-difference, 100% 0%, 100% 100%, 0% 100%);
+    }
 }
