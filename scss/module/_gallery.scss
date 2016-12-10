@@ -1,40 +1,59 @@
-$-deck-item-count: 3;
-$-deck-item-width: 40vw;
+$-deck-item-count: 4;
 $-deck-item-gutter: $border-width;
+$-deck-item-width: (
+    large: 44vw,
+    small: 72vw
+);
 
 $-background-options: center center / cover no-repeat;
 
 #gallery {
-    overflow: hidden;
     padding-top: $border-width;
+    transform: translateZ(1px);
 
     .slant {
         overflow: hidden;
         width: 100%;
-        margin-bottom: calc(-3vw + #{$border-width});
+        height: map-get($-deck-item-width, large) * (3/4);
+        margin-bottom: calc(-1 * #{$slant-difference} + #{$border-width});
     }
 
     .deck {
-        width: $-deck-item-width * $-deck-item-count;
+        width: map-get($-deck-item-width, large) * $-deck-item-count;
         font-size: 0;
     }
 
     .deck-item {
         display: inline-block;
         margin-right: $border-width;
+        transform: translateZ(0);
         box-sizing: border-box;
 
         &:last-child {
-            margin-right: ($-deck-item-gutter * 3) * -1;
+            margin-right: ($-deck-item-gutter * $-deck-item-count) * -1;
         }
 
-        @for $index from 1 through 9 {
+        @for $index from 1 through 12 {
             &.deck-item--#{$index} {
                 @include background('gallery/gallery-#{$index}', 'jpg', $-background-options);
-                width: $-deck-item-width;
-                height: $-deck-item-width * (3/4);
-                // margin-bottom: (($index + 2) % 3) * 2#{'vw'};
+                width: map-get($-deck-item-width, large);
+                height: map-get($-deck-item-width, large) * (3/4);
+
+                @include small() {
+                    width: map-get($-deck-item-width, small);
+                    height: map-get($-deck-item-width, small) * (3/4);
+                }
             }
+        }
+    }
+
+    @include small() {
+        .slant {
+            height: map-get($-deck-item-width, small) * (3/4);
+        }
+
+        .deck {
+            width: map-get($-deck-item-width, small) * $-deck-item-count;
         }
     }
 }

@@ -1,0 +1,14 @@
+#story {
+    .heartskull-minimal {
+        display: block;
+        width: 96px;
+        margin: 0 auto 48px;
+    }
+
+    p {
+        margin: 0 13em 1.2em;
+
+        @include medium() { margin: 0 3em 1.2em; }
+        @include small() { margin: 0 1em 1.2em; }
+    }
+}

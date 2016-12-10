@@ -1,0 +1,70 @@
+$-slide-width: (
+    large: 42vw,
+    small: 80vw
+);
+
+#save-the-date {
+    .section-padding {
+        padding-top: 6em;
+
+        @include small() {
+            padding-top: 4em;
+        }
+    }
+
+    /**
+     * (optional) define here the style definitions which should be applied on the slider container
+     * e.g. width including further controls like arrows etc.
+     */
+    .slider {}
+
+    .frame {
+        cursor: grab;
+        position: relative;
+        width: map-get($-slide-width, large);
+        margin: 0 auto;
+        font-size: 0;
+        line-height: 0;
+        white-space: nowrap;
+    }
+
+    .slides {
+        display: inline-block;
+    }
+
+    .js_slide {
+        display: inline-block;
+        position: relative;
+        width: map-get($-slide-width, large);
+        margin-right: 18vw;
+        padding: 1em;
+        border: $border-width solid color(moss);
+        box-sizing: border-box;
+
+        h2 {
+            pointer-events: none;
+            position: relative;
+            left: -0.7em;
+            color: color(moss);
+            background-color: color(white);
+        }
+
+        address {
+            @include typography(big);
+            margin-bottom: -0.3em;
+        }
+
+        &.active {
+            border-color: color(rose);
+
+            h2 { color: color(rose); }
+        }
+    }
+
+    @include small() {
+        .frame,
+        .js_slide {
+            width: map-get($-slide-width, small);
+        }
+    }
+}

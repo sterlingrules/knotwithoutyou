@@ -1,18 +1,49 @@
 //
 // Typography
 //
+html,
+body,
+.font-reset {
+    font: 400 18px / 24px $-default-family;
+
+    @include medium() {
+        font: 400 16px / 22px $-default-family;
+    }
+
+    @include small() {
+        font: 400 14px / 22px $-default-family;
+    }
+}
+
 .typography-headline {
     @include typography(headline);
+    position: relative;
+    color: color(rose);
+
+    .typography-background {
+        @include typography(headline-background);
+        position: absolute;
+        top: 50%;
+        left: -0.2em;
+        text-transform: uppercase;
+        transform: translateY(-50%);
+        color: rgba(color(moss), 0.45);
+    }
 }
 
 .typography-subheadline {
     @include typography(subheadline);
-    margin-bottom: 0.28em;
-    text-transform: uppercase;
+    margin-bottom: 0.4em;
 }
 
 .typography-big {
-    @include typography(subheadline);
+    @include typography(big);
+    margin-bottom: 0.4em;
+}
+
+.typography-huge {
+    @include typography(huge);
+    margin-bottom: 0.4em;
 }
 
 .copy-margin {

@@ -41,10 +41,13 @@
   },
   "dependencies": {
     "classnames": "~2.2.3",
+    "es6-event-emitter": "^1.5.2",
     "flat": "~2.0.1",
+    "gulp-sourcemaps": "^2.2.0",
     "html-to-react": "~0.1.2",
     "invariant": "~2.2.1",
     "lodash": "~3.10.1",
+    "lory.js": "^2.2.1",
     "mapbox": "^1.0.0-beta3",
     "mapbox-gl": "^0.26.0",
     "marked": "~0.3.5",
@@ -64,6 +67,7 @@
     "react-router": "~2.0.1",
     "react-slick": "~0.12.0",
     "redux": "~3.3.1",
-    "superagent": "~1.8.3"
+    "superagent": "~1.8.3",
+    "underscore": "^1.8.3"
   }
 }

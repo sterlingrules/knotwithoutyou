@@ -1,0 +1,56 @@
+$-width: 12px;
+$-dotcount: 4;
+$-border-width: $border-width / 2;
+
+.dotnav {
+    position: relative;
+    display: block;
+    width: ($-width + ($-border-width * 4)) * $-dotcount;
+    margin: 24px auto;
+    padding-left: ($-width + ($-border-width * 4)) * 3;
+    font-size: 0;
+
+    .selector {
+        position: absolute;
+        display: block;
+        width: $-width + ($-border-width * 2);
+        height: $-width + ($-border-width * 2);
+        border: $-border-width solid color(rose);
+    }
+
+    ul { transition: transform 0.25s linear 0s; }
+
+    li {
+        position: relative;
+        display: inline-block;
+        width: $-width;
+        height: $-width;
+        padding: $-border-width * 2;
+        border: 0;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: $-border-width * 2;
+            width: $-width;
+            height: $-width;
+            background-color: color(charcoal);
+        }
+
+        &.active:before {
+            background-color: color(rose);
+        }
+    }
+
+    &.dotnav--vertical {
+        width: auto;
+        padding-left: 0;
+
+        li {
+            display: block;
+        }
+    }
+}

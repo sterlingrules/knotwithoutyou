@@ -1,0 +1,15 @@
+#registry {
+    background-color: rgba(color(charcoal), 0.3);
+
+    .zola {
+        display: block;
+        width: 320px;
+        height: 154px;
+        background: transparent url('../img/zola_logo_charcoal.png') 0 0 / 100% auto no-repeat;
+
+        @include small() {
+            width: 240px;
+            height: 116px;
+        }
+    }
+}

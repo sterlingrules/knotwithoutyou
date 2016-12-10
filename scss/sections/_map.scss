@@ -1,7 +1,46 @@
+@keyframes bounce {
+    0%   { transform: translate3d(0,0,0); }
+    50%  { transform: translate3d(0,-30%,0); }
+}
+
+@keyframes bounce-shadow {
+    0%   { transform: translateX(-50%) scale3d(1.0, 1.0, 1.0); }
+    50%  { transform: translateX(-50%) scale3d(0.7, 1.0, 1.0); }
+}
+
+$-poi-dimension: 44px;
+
 #map {
     .section-scroll {
         position: relative;
-        height: 300vh;
+        height: 400vh;
+    }
+
+    .section-complete {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        &.section-padding {
+            padding: 0 5em 5em;
+        }
+    }
+
+    h1 {
+        opacity: 0.01;
+        transform: translate3d(0, 50%, 0);
+        transition: opacity 0.7s ease-out 0.3s;
+        transition-property: opacity, transform;
+    }
+
+    .map-complete h1 {
+        opacity: 0.99;
+        transform: translate3d(0, 0, 0);
+    }
+
+    @include small() {
+        h1 { display: none; }
     }
 }
 
@@ -15,13 +54,68 @@
     left: 0;
     width: 100%;
     height: 106vh;
+    transform: translate3d(0, 0, 0);
 
     .mapboxgl-marker {
         display: block;
-        width: 36px;
-        height: 36px;
-        background-color: color(rose);
-        transform-origin: 50% 100%;
-        border-radius: 50%;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+        }
     }
+
+    .marker-main {
+        &:before {
+            bottom: 6px;
+            width: 96px;
+            height: 96px;
+            background: transparent url('../img/heartskull_icon.svg');
+            background-size: 96px;
+            transform-origin: 50% 100%;
+            animation: bounce 2s ease-in-out 0s infinite;
+        }
+
+        &:after {
+            left: 50%;
+            bottom: 0;
+            width: 56px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: rgba(color(charcoal), 0.3);
+            box-shadow: 0 0 36px rgba(color(charcoal), 0.3);
+            animation: bounce-shadow 2s ease-in-out 0s infinite;
+            transform: translateX(-50%);
+        }
+    }
+
+    .marker-poi {
+        display: none;
+        background-color: color(charcoal);
+        border-radius: 50%;
+
+        &.active {
+            background-color: color(rose);
+        }
+    }
+
+    .dotnav {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transition: opacity 0.7s ease-out 0.3s;
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+.map-complete #mapview {
+    .mapboxgl-marker {
+        &.marker-main { display: none; }
+        &.marker-poi { display: block; }
+    }
+
+    .dotnav { opacity: 0.01; }
 }

@@ -9,19 +9,19 @@
         }
     }
 
-    // @include medium() {
-    //     background: url('#{$-path}#{$name}_medium.#{$ext}') $options;
+    @include medium() {
+        background: url('#{$-path}#{$name}_medium.#{$ext}') $options;
 
-    //     @include retina() {
-    //         background: url('#{$-path}#{$name}_medium@2x.#{$ext}') $options;
-    //     }
-    // }
+        @include retina() {
+            background: url('#{$-path}#{$name}_medium@2x.#{$ext}') $options;
+        }
+    }
 
-    // @include small() {
-    //     background: url('#{$-path}#{$name}_small.#{$ext}') $options;
+    @include small() {
+        background: url('#{$-path}#{$name}_small.#{$ext}') $options;
 
-    //     @include retina() {
-    //         background: url('#{$-path}#{$name}_small@2x.#{$ext}') $options;
-    //     }
-    // }
+        @include retina() {
+            background: url('#{$-path}#{$name}_small@2x.#{$ext}') $options;
+        }
+    }
 }

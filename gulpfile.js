@@ -3,6 +3,7 @@ var gulp         = require('gulp'),
     path         = require('path'),
     cleanCSS     = require('gulp-minify-css'),
     minify       = require('gulp-minifier'),
+    sourcemaps   = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     watch        = require('gulp-watch'),
     rimraf       = require('gulp-rimraf'),
@@ -21,7 +22,8 @@ var tasks = [
     'clean:js',
     'build:html',
     'build:css',
-    'build:js'
+    'build:js',
+    'build:headjs'
 ];
 
 gulp.task('clean:js', function() {
@@ -61,25 +63,58 @@ gulp.task('build:js', ['clean:js'], function(cb) {
         })
         .transform(babelify, {
             presets: [
-                'es2015',
-                'react'
+                'es2015'
             ],
             plugins: [
                 'transform-class-properties'
             ]
         })
         .bundle()
-        // .on('error', notify.onError(function (error) {
-        //     return getMessage(fileType, error);
-        // }))
+        .on('error', notify.onError(function (error) {
+            return getMessage(fileType, error);
+        }))
         .pipe(source('app.js'))
         .pipe(buffer())
+        .pipe(sourcemaps.init({ loadMaps: true }))
         // .pipe(minify({
         //     minify: true,
         //     collapseWhitespace: true,
         //     conservativeCollapse: true,
         //     minifyJS: true
         // }))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('./public/js'))
+        .pipe(notify(getMessage(fileType)));
+});
+
+gulp.task('build:headjs', ['clean:js'], function(cb) {
+    var fileType = 'JavaScript';
+
+    return browserify('./js/head.js', {
+            debug: true
+        })
+        .transform(babelify, {
+            presets: [
+                'es2015'
+            ],
+            plugins: [
+                'transform-class-properties'
+            ]
+        })
+        .bundle()
+        .on('error', notify.onError(function (error) {
+            return getMessage(fileType, error);
+        }))
+        .pipe(source('head.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({ loadMaps: true }))
+        // .pipe(minify({
+        //     minify: true,
+        //     collapseWhitespace: true,
+        //     conservativeCollapse: true,
+        //     minifyJS: true
+        // }))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./public/js'))
         .pipe(notify(getMessage(fileType)));
 });
@@ -97,7 +132,7 @@ gulp.task('watch', tasks, function() {
 
     // TODO: use gulp-watch AND gulp-plumber (for errors)
     gulp.watch('./scss/**/*.scss', [ 'build:css' ], { verbose: true });
-    gulp.watch([ './js/**/*.js', './js/**/*.jsx' ], [ 'clean:js', 'build:js' ]);
+    gulp.watch([ './js/**/*.js', './js/**/*.jsx' ], [ 'clean:js', 'build:js', 'build:headjs' ]);
     gulp.watch('./js/views/**/*.hbs', [ 'build:html' ]);
 
     /*

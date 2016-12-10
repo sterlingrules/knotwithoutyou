@@ -1,11 +1,8 @@
-$-slant-difference: 3vw;
-
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font: normal 18px "proxima-nova", sans-serif;
     color: color(charcoal);
     background-color: color(white);
 }
@@ -27,12 +24,6 @@ body:before {
     }
 }
 
-.wrapper {
-    display: block;
-    width: 980px;
-    margin: 0 auto;
-}
-
 a {
     color: color(charcoal);
     text-decoration: none;
@@ -47,7 +38,11 @@ p {
 //
 .section-padding {
     display: block;
-    padding: 120px 0;
+    padding: 13.3em 0;
+
+    @include small() {
+        padding: 10em 0;
+    }
 }
 
 .section-content {
@@ -55,20 +50,23 @@ p {
     width: 980px;
     margin-right: auto;
     margin-left: auto;
+
+    @include medium() { width: 600px; }
+    @include small() { width: 90%; }
 }
 
 .slant {
     overflow: hidden;
     position: relative;
-    margin-bottom: -1 * $-slant-difference;
-    clip-path: polygon(0% $-slant-difference, 100% 0%, 100% calc(100% - #{$-slant-difference}), 0% 100%);
+    margin-bottom: -1 * $slant-difference;
+    clip-path: polygon(0% $slant-difference, 100% 0%, 100% calc(100% - #{$slant-difference}), 0% 100%);
 
     &.slant-first {
-        clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - #{$-slant-difference}), 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - #{$slant-difference}), 0% 100%);
     }
 
     &.slant-last {
         margin-bottom: 0;
-        clip-path: polygon(0% $-slant-difference, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% $slant-difference, 100% 0%, 100% 100%, 0% 100%);
     }
 }

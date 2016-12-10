@@ -29,19 +29,23 @@
 //
 // Modules
 //
-@import 'module/hero';
 @import 'module/button';
 @import 'module/headline';
 @import 'module/avatar';
 @import 'module/gallery';
+@import 'module/dotnav';
 @import 'module/modal';
 @import 'module/form';
+@import 'module/parallax';
 @import 'module/footer';
 
 
 //
 // Sections
 //
+@import 'sections/hero';
 @import 'sections/couple';
+@import 'sections/story';
 @import 'sections/map';
-@import 'sections/invitation';
+@import 'sections/save-the-date';
+@import 'sections/registry';

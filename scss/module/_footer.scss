@@ -6,4 +6,14 @@ footer {
     padding: 48px 0;
     background-color: color(charcoal);
     clear: both;
+
+    .footer-logo {
+        display: block;
+        width: 100px;
+        height: 204px;
+
+        @include small() {
+            margin: 0 auto;
+        }
+    }
 }

@@ -41,6 +41,7 @@
 .text-uppercase { text-transform: uppercase; }
 
 .text-ellipses  {
+    display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -50,6 +51,7 @@
 // Colors
 //
 .color-cream { color: color(white); }
+.color-rose { color: color(rose); }
 
 .fill-white { fill: color(white); }
 .fill-charcoal { fill: color(charcoal); }
