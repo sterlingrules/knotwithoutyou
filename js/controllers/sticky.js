@@ -6,8 +6,10 @@ const SCROLL_ATTRIBUTE = 'data-scroll'
 
 const StickyController = {
     init() {
+        this.html = document.documentElement
         this.stickyEl = document.querySelector(`[${STICKY_ATTRIBUTE}]`)
         this.scrollEl = document.querySelector(`[${SCROLL_ATTRIBUTE}]`)
+        this.supportsSticky = this.html.classList.contains('webkit-sticky', 'sticky')
 
         this.window = new WindowModel()
 
@@ -28,6 +30,8 @@ const StickyController = {
     },
 
     update() {
+        if (this.supportsSticky) return
+
         requestAnimationFrame(() => {
             let scrollPosition = this.window.scrollPosition || 0
 
@@ -70,7 +74,7 @@ const StickyController = {
     },
 
     reset() {
-        if (this.isCleared) return
+        if (this.isCleared) return this
 
         this.stickyEl.removeAttribute('style')
 

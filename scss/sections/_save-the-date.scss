@@ -5,10 +5,10 @@ $-slide-width: (
 
 #save-the-date {
     .section-padding {
-        padding-top: 6em;
+        padding-top: 5em;
 
         @include small() {
-            padding-top: 4em;
+            padding-top: 3em;
         }
     }
 

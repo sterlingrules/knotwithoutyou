@@ -196,7 +196,7 @@ class Timeline extends Component {
     //
     parallaxHero(evt) {
         setStyle(evt.element, {
-            transform: `translate3d(0, ${evt.progress * -200}px, 0)`
+            transform: `translate3d(0, ${evt.progress * -10}vh, 0)`
         })
     }
 

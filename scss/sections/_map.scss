@@ -24,6 +24,7 @@ $-poi-dimension: 44px;
 
         &.section-padding {
             padding: 0 5em 5em;
+            box-sizing: border-box;
         }
     }
 
@@ -35,12 +36,31 @@ $-poi-dimension: 44px;
     }
 
     .map-complete h1 {
+        display: inline-block;
         opacity: 0.99;
         transform: translate3d(0, 0, 0);
+
+        @include small() {
+            display: none;
+        }
     }
 
-    @include small() {
-        h1 { display: none; }
+    .slant-top,
+    .slant-bottom {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: $slant-difference * 2;
+        background: color(white);
+    }
+
+    .slant-top {
+        top: $slant-difference * -1;
+    }
+
+    .slant-bottom {
+        bottom: 0;
     }
 }
 
@@ -53,7 +73,7 @@ $-poi-dimension: 44px;
     right: 0;
     left: 0;
     width: 100%;
-    height: 106vh;
+    height: 100vh;
     transform: translate3d(0, 0, 0);
 
     .mapboxgl-marker {
