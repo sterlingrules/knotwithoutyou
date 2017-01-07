@@ -4,12 +4,8 @@ $-slide-width: (
 );
 
 #save-the-date {
-    .section-padding {
-        padding-top: 5em;
-
-        @include small() {
-            padding-top: 3em;
-        }
+    .section-content {
+        padding-bottom: 1em;
     }
 
     /**

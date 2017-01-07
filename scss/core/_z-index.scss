@@ -4,10 +4,10 @@
 .hero-background                    { z-index: 1; }
 .couple-block .couple-profile       { z-index: 1; }
 #mapview .dotnav                    { z-index: 1; }
-.slant-top                          { z-index: 1; }
-.slant-bottom                       { z-index: 1; }
+.slant-first                        { z-index: 1; }
+.slant-last                         { z-index: 1; }
 
-.hero-logo                          { z-index: 2; }
+.hero-content                       { z-index: 2; }
 .couple-block .typography-headline  { z-index: 2; }
 #map h1                             { z-index: 2; }
 #save-the-date                      { z-index: 2; }

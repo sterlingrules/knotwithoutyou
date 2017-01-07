@@ -32,8 +32,8 @@ const MARKER_COMPLETE = {
         zoom: 13
     },
     small: {
-        center: [ -80.1411887, 26.138876 ],
-        zoom: 11.3
+        center: [ -80.1411887, 26.136876 ],
+        zoom: 12.2
     }
 }
 

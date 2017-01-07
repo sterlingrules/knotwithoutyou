@@ -7,10 +7,10 @@ $-typography: (
     headline:            (('helena', sans-serif), 400, 5.88em, 0.75),
     subheadline:         (('helena', sans-serif), 400, 4.3em, 1),
     headline-background: ($-default-family, 100, 1.2em, 0.75),
+    huge:                ($-default-family, 600, 1.78em, 40px),
     big:                 ($-default-family, 400, 1.2em, 1.5),
 
     gigantic:            ($-default-family, 300, 2.67em, 64px),
-    huge:                ($-default-family, 300, 1.78em, 40px),
 
     small:               ($-default-family, 400, 0.78em, 20px),
     fine:                ($-default-family, 400, 0.67em, 16px)
