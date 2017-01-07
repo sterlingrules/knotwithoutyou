@@ -5,11 +5,19 @@
         display: block;
         width: 320px;
         height: 154px;
+        margin-bottom: 2.75em;
         background: transparent url('../img/zola_logo_charcoal.png') 0 0 / 100% auto no-repeat;
 
         @include small() {
             width: 240px;
             height: 116px;
         }
+    }
+
+    .copy-block {
+        margin: 0 11em 2.75em;
+
+        @include medium() { margin: 0 3em 2.75em; }
+        @include small() { margin: 0 1em 2.75em; }
     }
 }

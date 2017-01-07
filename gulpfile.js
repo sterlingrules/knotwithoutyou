@@ -55,7 +55,7 @@ gulp.task('build:css', function() {
         .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('build:js', ['clean:js'], function(cb) {
+gulp.task('build:js', function(cb) {
     var fileType = 'JavaScript';
 
     return browserify('./js/app.js', {
@@ -75,19 +75,19 @@ gulp.task('build:js', ['clean:js'], function(cb) {
         }))
         .pipe(source('app.js'))
         .pipe(buffer())
-        .pipe(sourcemaps.init({ loadMaps: true }))
-        // .pipe(minify({
-        //     minify: true,
-        //     collapseWhitespace: true,
-        //     conservativeCollapse: true,
-        //     minifyJS: true
-        // }))
-        .pipe(sourcemaps.write('./'))
+        // .pipe(sourcemaps.init({ loadMaps: false }))
+        .pipe(minify({
+            minify: true,
+            collapseWhitespace: true,
+            conservativeCollapse: true,
+            minifyJS: true
+        }))
+        // .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./public/js'))
         .pipe(notify(getMessage(fileType)));
 });
 
-gulp.task('build:headjs', ['clean:js'], function(cb) {
+gulp.task('build:headjs', function(cb) {
     var fileType = 'JavaScript';
 
     return browserify('./js/head.js', {
@@ -107,14 +107,14 @@ gulp.task('build:headjs', ['clean:js'], function(cb) {
         }))
         .pipe(source('head.js'))
         .pipe(buffer())
-        .pipe(sourcemaps.init({ loadMaps: true }))
-        // .pipe(minify({
-        //     minify: true,
-        //     collapseWhitespace: true,
-        //     conservativeCollapse: true,
-        //     minifyJS: true
-        // }))
-        .pipe(sourcemaps.write('./'))
+        // .pipe(sourcemaps.init({ loadMaps: false }))
+        .pipe(minify({
+            minify: true,
+            collapseWhitespace: true,
+            conservativeCollapse: true,
+            minifyJS: true
+        }))
+        // .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./public/js'))
         .pipe(notify(getMessage(fileType)));
 });

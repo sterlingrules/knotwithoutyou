@@ -1,0 +1,16 @@
+[data-canvas-component] {
+    opacity: 0;
+    transition: opacity 0.3s ease-out 0.1s;
+
+    canvas {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    &.canvas-active {
+        background-image: none !important;
+        opacity: 0.99;
+    }
+}

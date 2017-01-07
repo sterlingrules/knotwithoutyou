@@ -10,11 +10,12 @@
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: 600;
+    text-indent: 0.1em;
+    letter-spacing: 0.2em;
+    font-weight: 900;
     color: color(charcoal);
     background-color: transparent;
     border: 2px solid transparent;
-    transition: all 0.1s ease-in-out 0s;
     outline: none;
 
     & + & {
@@ -25,17 +26,25 @@
 
     &:hover { text-decoration: none; }
 
+    &,
     &:before,
     &::before {
+        transition: all 0.25s ease-in-out 0s;
+    }
+
+    &:before,
+    &::before {
+        $-border-width: $border-width * 2;
+
         content: '';
         display: block;
         position: absolute;
         top: 6px;
         left: 6px;
-        right: -1 * $border-width;
-        bottom: -1 * $border-width;
+        right: -1 * $-border-width;
+        bottom: -1 * $-border-width;
         border: none;
-        border-width: 0 $border-width $border-width 0;
+        border-width: 0 $-border-width $-border-width 0;
         border-style: solid;
         border-color: color(charcoal);
     }
@@ -48,6 +57,29 @@
     &.btn-action {
         color: color(charcoal);
         border-color: color(charcoal);
+    }
+
+    &.btn-secondary {
+        color: color(rose);
+
+        &,
+        &:before,
+        &::before {
+            border-color: color(rose);
+        }
+
+        &:hover {
+            text-indent: 0.4em;
+            letter-spacing: 0.8em;
+            color: color(charcoal);
+            background-color: color(white);
+
+            &,
+            &:before,
+            &::before {
+                border-color: color(white);
+            }
+        }
     }
 
     &.btn-cancel {

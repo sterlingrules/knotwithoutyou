@@ -19,14 +19,18 @@ body:before {
     min-height: 100%;
 
     #content {
-        overflow: auto;
         padding-bottom: $footer-height;
     }
 }
 
 a {
-    color: color(charcoal);
+    font-weight: 900;
     text-decoration: none;
+    color: color(charcoal);
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 p {
