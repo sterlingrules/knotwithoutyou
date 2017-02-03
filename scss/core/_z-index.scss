@@ -3,9 +3,10 @@
 .mapboxgl-marker:before             { z-index: 1; }
 .hero-background                    { z-index: 1; }
 .couple-block .couple-profile       { z-index: 1; }
-#mapview .dotnav                    { z-index: 1; }
 .slant-first                        { z-index: 1; }
 .slant-last                         { z-index: 1; }
+.arrow                              { z-index: 1; }
+#mapview .dotnav                    { z-index: 1; }
 
 .hero-content                       { z-index: 2; }
 .couple-block .typography-headline  { z-index: 2; }
@@ -13,6 +14,8 @@
 #save-the-date                      { z-index: 2; }
 .modal-overlay                      { z-index: 2; }
 
+.couple-block .typography-huge      { z-index: 3; }
+.section-complete .typography-huge  { z-index: 3; }
 .modal                              { z-index: 3; }
 
 #modal-profile .avatar              { z-index: 4; }

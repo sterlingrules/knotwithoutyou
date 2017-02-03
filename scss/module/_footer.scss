@@ -1,9 +1,10 @@
 footer {
     display: block;
     position: relative;
-    height: $footer-height;
-    margin-top: $footer-height * -1;
+    height: map-get($footer-height, large);
+    margin-top: map-get($footer-height, large) * -1;
     padding: 48px 0;
+    color: color(white);
     background-color: color(charcoal);
     clear: both;
 
@@ -15,5 +16,23 @@ footer {
         @include small() {
             margin: 0 auto;
         }
+    }
+
+    .footer-linkstack {
+        margin-bottom: 2em;
+
+        a {
+            letter-spacing: 0.125em;
+            text-transform: uppercase;
+        }
+    }
+
+    @include small() {
+        .text-right {
+            text-align: center;
+        }
+
+        height: map-get($footer-height, small);
+        margin-top: map-get($footer-height, small) * -1;
     }
 }

@@ -1,0 +1,48 @@
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+}
+
+.icon-left-open:before { content: '\e800'; } /* '' */
+.icon-right-open:before { content: '\e801'; } /* '' */
+.icon-left-open-mini:before { content: '\e802'; } /* '' */
+.icon-right-open-mini:before { content: '\e803'; } /* '' */
+.icon-left-open-big:before { content: '\e804'; } /* '' */
+.icon-right-open-big:before { content: '\e805'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-facebook:before { content: '\f230'; } /* '' */
+.icon-snapchat:before { content: '\f2ac'; } /* '' */
+.icon-heart:before { content: '\e806'; } /* '' */
+.icon-beer:before { content: '\e807'; } /* '' */
+.icon-wine:before { content: '\e808'; } /* '' */
+.icon-glass:before { content: '\e809'; } /* '' */
+.icon-music:before { content: '\e80a'; } /* '' */
+.icon-note-beamed:before { content: '\e80b'; } /* '' */
+.icon-flight:before { content: '\e80c'; } /* '' */
+.icon-music-1:before { content: '\e80d'; } /* '' */
+.icon-lodging:before { content: '\e824'; } /* '' */
+.icon-diamond:before { content: '\f219'; } /* '' */
+.icon-bed:before { content: '\f236'; } /* '' */
+.icon-map-o:before { content: '\f278'; } /* '' */
+.icon-map:before { content: '\f279'; } /* '' */

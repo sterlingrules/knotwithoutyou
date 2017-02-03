@@ -11,6 +11,8 @@ const StickyController = {
         this.scrollEl = document.querySelector(`[${SCROLL_ATTRIBUTE}]`)
         this.supportsSticky = this.html.classList.contains('webkit-sticky', 'sticky')
 
+        if (!this.stickyEl) return
+
         this.window = new WindowModel()
 
         this.reset = this.reset.bind(this)

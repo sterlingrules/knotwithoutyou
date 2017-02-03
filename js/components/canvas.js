@@ -35,14 +35,16 @@ export default class CanvasComponent extends Component {
         let style = getComputedStyle(this.element)
 
         this.imageSource = style.backgroundImage.replace(/(url\(\"|\)|\"|url\()/g, '')
+        this.imageWidth = style.width.replace('px', '')
+        this.imageHeight = style.height.replace('px', '')
     }
 
     appendCanvas() {
         let { viewport } = this.window
 
         this.canvas = document.createElement('canvas')
-        this.canvas.width = this.options[viewport][0]
-        this.canvas.height = this.options[viewport][1]
+        this.canvas.width = this.options[viewport] ? this.options[viewport][0] : this.imageWidth
+        this.canvas.height = this.options[viewport] ? this.options[viewport][1] : this.imageHeight
 
         this.element.appendChild(this.canvas)
     }
@@ -57,6 +59,6 @@ export default class CanvasComponent extends Component {
         let context = this.canvas.getContext('2d')
         let { viewport } = this.window
 
-        context.drawImage(this.image, 0, 0, this.options[viewport][0], this.options[viewport][1])
+        context.drawImage(this.image, 0, 0, this.canvas.width, this.canvas.height)
     }
 }

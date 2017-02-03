@@ -9,13 +9,24 @@
         margin: 0 auto 200px;
         border: $border-width solid color(rose);
 
-        .typography-headline {
+        .couple-headline {
             position: absolute;
             bottom: 20%;
             left: -8%;
-            padding: 0.5em 0;
+            padding: 2.6em 0 0.5em;
             background-color: color(white);
+
+            .typography-headline {
+                margin-bottom: -0.1em;
+            }
+
+            .typography-huge {
+                position: relative;
+                font-weight: 400;
+                background-color: transparent;
+            }
         }
+
 
         @include medium() {
             width: 400px;
@@ -27,7 +38,7 @@
             height: 64vh;
             margin-bottom: 120px;
 
-            .typography-headline {
+            .couple-headline {
                 top: 4%;
                 bottom: auto;
                 left: -8%;

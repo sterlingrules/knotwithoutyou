@@ -14,10 +14,14 @@ const VIEW_OFFSET = {
 const POIController = {
     init() {
         this.element = document.querySelector('[data-poi]')
+
+        if (!this.element) return
+
         this.slideEls = this.element.querySelectorAll('li')
         this.options = {
             infinite: false,
-            enableMouseEvents: true
+            enableMouseEvents: true,
+            arrows: true
         }
 
         this.onChange = this.onChange.bind(this)

@@ -20,11 +20,17 @@
 
     & + & {
         margin-left: 0.6em;
+        margin-top: 1em;
     }
 
     * { pointer-events: none; }
 
-    &:hover { text-decoration: none; }
+    &:hover,
+    &:visited,
+    &:link,
+    &:link:hover {
+        text-decoration: none;
+    }
 
     &,
     &:before,
@@ -69,8 +75,27 @@
         }
 
         &:hover {
-            text-indent: 0.4em;
-            letter-spacing: 0.8em;
+            color: color(charcoal);
+            background-color: transparent;
+
+            &,
+            &:before,
+            &::before {
+                border-color: color(charcoal);
+            }
+        }
+    }
+
+    &.btn-secondarylight {
+        color: color(rose);
+
+        &,
+        &:before,
+        &::before {
+            border-color: color(rose);
+        }
+
+        &:hover {
             color: color(charcoal);
             background-color: color(white);
 
@@ -80,6 +105,11 @@
                 border-color: color(white);
             }
         }
+    }
+
+    &.btn-animate:hover {
+        text-indent: 0.4em;
+        letter-spacing: 0.8em;
     }
 
     &.btn-cancel {
@@ -130,6 +160,14 @@
             border-left: 6px solid color(white);
             border-bottom: 6px solid color(white);
             transform: rotate(-45deg);
+        }
+    }
+
+    @include small() {
+        &.btn-small-center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

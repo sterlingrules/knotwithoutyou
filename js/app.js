@@ -1,11 +1,9 @@
 import _ from 'underscore'
-import Rellax from 'rellax'
 
 import MapController from './controllers/map.js'
 import StickyController from './controllers/sticky.js'
 import POIController from './controllers/poi-gallery.js'
 import TimelineComponent from './components/timeline.js'
-import ParallaxComponent from './components/parallax.js'
 import CanvasComponent from './components/canvas.js'
 
 const App = {
@@ -15,7 +13,6 @@ const App = {
         POIController.init()
 
         this.setupTimeline()
-        this.setupParallax()
         this.setupCanvas()
 
         return this
@@ -25,6 +22,8 @@ const App = {
         let timelineEls = document.querySelectorAll('[data-timeline-component]')
         let TimelineComponents = []
 
+        if (!timelineEls.length) return
+
         _.each(timelineEls, (element, index) => {
             TimelineComponents[index] = new TimelineComponent({
                 name: 'timeline-component',
@@ -33,21 +32,11 @@ const App = {
         })
     },
 
-    setupParallax() {
-        let parallaxEls = document.querySelectorAll('[data-parallax-component]')
-        let ParallaxComponents = []
-
-        _.each(parallaxEls, (element, index) => {
-            ParallaxComponents[index] = new ParallaxComponent({
-                name: 'parallax-component',
-                element: element
-            })
-        })
-    },
-
     setupCanvas() {
         let canvasEls = document.querySelectorAll('[data-canvas-component]')
         let CanvasComponents = []
+
+        if (!canvasEls.length) return
 
         _.each(canvasEls, (element, index) => {
             CanvasComponents[index] = new CanvasComponent({

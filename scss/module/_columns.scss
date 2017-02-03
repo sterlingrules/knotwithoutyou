@@ -1,0 +1,21 @@
+.row {
+    overflow: auto;
+}
+
+.column {
+    float: left;
+    display: inline-block;
+    width: 50%;
+    padding: 0 2em;
+    box-sizing: border-box;
+
+    @include small() {
+        float: none;
+        width: 100%;
+        margin-bottom: 5em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

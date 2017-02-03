@@ -4,14 +4,14 @@
 html,
 body,
 .font-reset {
-    font: 400 18px / 24px $-default-family;
+    font: 400 18px / 26px $-default-family;
 
     @include medium() {
-        font: 400 16px / 22px $-default-family;
+        font: 400 16px / 24px $-default-family;
     }
 
     @include small() {
-        font: 400 14px / 22px $-default-family;
+        font: 400 16px / 24px $-default-family;
     }
 }
 

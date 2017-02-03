@@ -24,6 +24,7 @@
 @import 'base/general';
 @import 'base/common';
 @import 'base/typography';
+@import 'base/icons';
 
 
 //
@@ -31,8 +32,9 @@
 //
 @import 'module/button';
 @import 'module/headline';
+@import 'module/columns';
 @import 'module/avatar';
-@import 'module/gallery';
+@import 'module/photowall';
 @import 'module/dotnav';
 @import 'module/modal';
 @import 'module/form';
@@ -50,3 +52,4 @@
 @import 'sections/map';
 @import 'sections/save-the-date';
 @import 'sections/registry';
+@import 'sections/info';

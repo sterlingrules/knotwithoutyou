@@ -32,7 +32,7 @@ const MARKER_COMPLETE = {
         zoom: 13
     },
     small: {
-        center: [ -80.1411887, 26.136876 ],
+        center: [ -80.1411887, 26.140876 ],
         zoom: 12.2
     }
 }
@@ -43,6 +43,8 @@ const MapController = {
 
         this.checkinCount = STORY_LOCATIONS.length
         this.scrollEl = document.querySelector(`[${SCROLL_ATTRIBUTE}]`)
+
+        if (!this.scrollEl) return
 
         this.window = new WindowModel()
         this.galleryNav = new GalleryNav({

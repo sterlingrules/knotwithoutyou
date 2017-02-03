@@ -1,0 +1,17 @@
+.info {
+    .info-headline {
+        margin-bottom: 2em;
+
+        .typography-huge {
+            margin-bottom: 0;
+        }
+    }
+
+    @include small() {
+        text-align: center;
+
+        .text-right {
+            text-align: center;
+        }
+    }
+}

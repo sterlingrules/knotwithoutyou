@@ -4,15 +4,67 @@ $-slide-width: (
 );
 
 #save-the-date {
+    overflow: hidden;
+
     .section-content {
-        padding-bottom: 1em;
+        padding-bottom: 6em;
     }
 
     /**
      * (optional) define here the style definitions which should be applied on the slider container
      * e.g. width including further controls like arrows etc.
      */
-    .slider {}
+    .slider {
+        position: relative;
+        width: 65vw;
+        margin: 0 auto;
+        max-width: 100%;
+
+        .arrow {
+            @include typography(huge);
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 64px;
+            height: 100%;
+
+            &:before {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: transform 0.2s ease-in 0s;
+            }
+
+            @include small() {
+                display: none;
+            }
+        }
+
+        .arrow-prev {
+            &,
+            &:before {
+                left: 0;
+            }
+
+            &:hover:before {
+                left: 0;
+                transform: translate3d(-9%, -50%, 0) scale3d(1.1, 0.9, 1);
+            }
+        }
+
+        .arrow-next {
+            &,
+            &:before {
+                right: 0;
+            }
+
+            &:hover:before {
+                right: 0;
+                transform: translate3d(9%, -50%, 0) scale3d(1.1, 0.9, 1);
+            }
+        }
+    }
 
     .frame {
         cursor: grab;
@@ -61,6 +113,10 @@ $-slide-width: (
         .frame,
         .js_slide {
             width: map-get($-slide-width, small);
+        }
+
+        .slider {
+            width: 100%;
         }
     }
 }

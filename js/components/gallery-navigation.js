@@ -18,6 +18,19 @@ class GalleryNav extends Component {
         } else {
             this.stepDistance = this.navContainer.offsetWidth / this.navItems.length
         }
+
+        this.setActiveItem = this.setActiveItem.bind(this)
+
+        this.listen()
+    }
+
+    listen() {
+        this.navContainer.addEventListener('click', this.setActiveItem);
+        this.navContainer.addEventListener('touchend', this.setActiveItem);
+    }
+
+    setActiveItem(evt) {
+
     }
 
     setCurrentIndex(currentIndex) {

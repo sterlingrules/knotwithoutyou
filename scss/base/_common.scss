@@ -47,11 +47,18 @@
     text-overflow: ellipsis;
 }
 
+@include small() {
+    .small-text-left {
+        text-align: left;
+    }
+}
+
 //
 // Colors
 //
 .color-cream { color: color(white); }
 .color-rose { color: color(rose); }
+.color-charcoal { color: color(charcoal); }
 
 .fill-white { fill: color(white); }
 .fill-charcoal { fill: color(charcoal); }

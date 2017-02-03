@@ -1,27 +1,33 @@
-@mixin background($name, $ext, $options: center center / auto auto no-repeat) {
-    $-path: '../img/';
+@mixin background($name, $ext, $options: center center / auto auto no-repeat, $retina: true) {
+    $-path: '/public/img/';
 
     @include large() {
         background: url('#{$-path}#{$name}_large.#{$ext}') $options;
 
-        @include retina() {
-            background: url('#{$-path}#{$name}_large@2x.#{$ext}') $options;
+        @if $retina == true {
+            @include retina() {
+                background: url('#{$-path}#{$name}_large@2x.#{$ext}') $options;
+            }
         }
     }
 
     @include medium() {
         background: url('#{$-path}#{$name}_medium.#{$ext}') $options;
 
-        @include retina() {
-            background: url('#{$-path}#{$name}_medium@2x.#{$ext}') $options;
+        @if $retina == true {
+            @include retina() {
+                background: url('#{$-path}#{$name}_medium@2x.#{$ext}') $options;
+            }
         }
     }
 
     @include small() {
         background: url('#{$-path}#{$name}_small.#{$ext}') $options;
 
-        @include retina() {
-            background: url('#{$-path}#{$name}_small@2x.#{$ext}') $options;
+        @if $retina == true {
+            @include retina() {
+                background: url('#{$-path}#{$name}_small@2x.#{$ext}') $options;
+            }
         }
     }
 }

@@ -134,7 +134,8 @@ export const POI = [{
     "name" : "Laura Ward Riverwalk Plaza",
     "classes" : [
         'marker-poi',
-        'active'
+        'active',
+        'icon-heart'
     ],
     "center" : [ -80.137176, 26.118448 ],
     "iconSize" : [ 44, 44 ]
@@ -144,7 +145,8 @@ export const POI = [{
     "attribute" : "reception",
     "name" : "Fort Lauderdale Women's Club",
     "classes" : [
-        'marker-poi'
+        'marker-poi',
+        'icon-music'
     ],
     "center" : [ -80.143091, 26.121780 ],
     "iconSize" : [ 44, 44 ]
@@ -154,9 +156,10 @@ export const POI = [{
     "attribute" : "afterparty",
     "name" : "Original Fat Cat's",
     "classes" : [
-        'marker-poi'
+        'marker-poi',
+        'icon-beer'
     ],
-    "center" : [ -80.147091, 26.126780 ],
+    "center" : [ -80.1487982, 26.1202813 ],
     "iconSize" : [ 44, 44 ]
 },
 {
@@ -164,7 +167,8 @@ export const POI = [{
     "attribute" : "hotel",
     "name" : "Fort Lauderdale Airport / Cruise Port Inn",
     "classes" : [
-        'marker-poi'
+        'marker-poi',
+        'icon-lodging'
     ],
     "center" : [ -80.136454, 26.109885 ],
     "iconSize" : [ 44, 44 ]
