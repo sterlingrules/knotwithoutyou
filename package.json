@@ -45,7 +45,7 @@
     "gulp-sourcemaps": "^2.2.0",
     "html-to-react": "~0.1.2",
     "invariant": "~2.2.1",
-    "lodash": "~3.10.1",
+    "lodash": "~4.17.19",
     "lory.js": "^2.2.1",
     "mapbox": "^1.0.0-beta3",
     "mapbox-gl": "^0.26.0",
